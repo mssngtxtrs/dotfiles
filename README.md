@@ -3,6 +3,7 @@ Here are my dotfiles.
 
 ## About
 These dotfiles are used on laptop (Redmibook Pro 15 2023) with Arch Linux installed.
+All labels are written in russian, i'll try to make english translation soon.
 
 ## Requirements
 Required software:
