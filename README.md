@@ -13,5 +13,9 @@ Required software:
 - waybar
 - SwayNC
 - SwayOSD
+- kitty
+- Nemo
+- Overskride
+- broghtnessctl
 
-Also bluez used for bluetooth and brightnessctl tor brightness control.
+Also, I used [Gruvbox GTK Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) in my configs.
