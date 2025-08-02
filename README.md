@@ -3,7 +3,7 @@ My dotfiles
 
 ## Requirements
 Required software:
-- Hyprland (with Hyprlock, Hyprlidle)
+- Hyprland (with Hyprlock, Hypridle)
 - Hyprshot
 - swww
 - Rofi
