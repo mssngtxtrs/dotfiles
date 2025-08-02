@@ -1,0 +1,430 @@
+:root {
+    --cc-bg: #282828;
+    --noti-border-color: #ebdbb2;
+    --noti-bg: #282828;
+    --noti-bg-alpha: 1;
+    --noti-bg-darker: #1d2021;
+    --noti-bg-hover: #3c3836;
+    --noti-bg-hover-alpha: 1;
+    /*--noti-bg-focus: #928374;*/
+    --noti-bg-focus: #ffffff00;
+    --noti-close-bg: rgba(255, 255, 255, 0.1);
+    --noti-close-bg-hover: rgba(255, 255, 255, 0.15);
+    --text-color: #ebdbb2;
+    --text-color-disabled: #a89984;
+    --bg-selected: #3c3836;
+    --notification-icon-size: 64px;
+    --notification-app-icon-size: calc(var(--notification-icon-size) / 3);
+    --notification-group-icon-size: 32px;
+}
+
+button {
+    border-radius: 0;
+    border: none;
+}
+
+.close-button {
+    background: var(--text-color);
+    color: var(--noti-bg);
+    text-shadow: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.close-button:hover {
+    box-shadow: none;
+    background: var(--text-color-disabled);
+    transition: .3s;
+    border: none;
+}
+
+.notification-row {
+    background: transparent;
+    outline: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-row:focus {
+    background: var(--noti-bg-focus);
+}
+
+.notification-row .notification-background {
+    padding: 0;
+    margin: 8px 16px;
+    border-radius: 0;
+}
+
+.notification-row .notification-background .notification {
+    border-radius: 0;
+    border: 1px solid var(--noti-border-color);
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    transition: .3s;
+    background: rgba(var(--noti-bg), var(--noti-bg-alpha));
+}
+
+.notification-row .notification-background .notification .notification-default-action {
+    border-radius: 0;
+    box-shadow: none;
+    border: var(--noti-border-color);
+    background: var(--noti-bg);
+    color: var(--text-color);
+    transition: .3s;
+}
+
+.notification-row .notification-background .notification .notification-default-action:hover {
+    -gtk-icon-filter: none;
+    background: var(--noti-bg-hover);
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .image {
+    padding: 0;
+    margin: 0;
+    margin-right: 16px;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .app-icon {
+    padding: 0;
+    margin: 0;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .summary {
+    font-size: 18px;
+    font-weight: 600;
+}
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .time {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.notification-row .notification-background .notification .notification-default-action .notification-content .text-box .body {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.notification-row .notification-background .notification .notification-alt-actions {
+    border-radius: 0;
+    padding: 0;
+}
+
+.notification-row .notification-background .notification .notification-action {
+    background: var(--text-color);
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+.notification-row .notification-background .notification .notification-action > button:hover {
+    background: var(--text-color-disabled);
+    transition: .3s;
+}
+
+.notification-row .notification-background .notification .notification-action > button {
+    background: var(--text-color);
+    color: var(--noti-bg);
+    border-radius: 0;
+    min-width: 400px;
+    filter: none;
+    margin: 0;
+}
+
+.notification-group {
+    transition: .3s;
+}
+
+.notification-group .notification-group-close-button .close-button {
+    margin: 8px 16px 0 0;
+}
+
+.notification-group.collapsed {
+    opacity: 1;
+}
+
+
+
+.control-center {
+    background: var(--cc-bg);
+    border-radius: 0;
+    border: 1px solid var(--noti-border-color);
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+.control-center .control-center-list-placeholder {
+    opacity: 1;
+}
+
+.control-center .control-center-list {
+    margin: 8px 0;
+}
+
+.control-center .control-center-list .notification {
+    box-shadow: none;
+}
+
+
+
+.widget-title {
+    background-color: var(--text-color);
+    color: var(--cc-bg);
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.widget-title > label {
+    margin: 0;
+    margin-left: 16px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.widget-title > button {
+    background: var(--text-color);
+    color: var(--noti-bg);
+    padding: 8px 12px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.widget-title > button:hover {
+    background: var(--text-color-disabled);
+}
+
+
+
+.widget-dnd {
+    background: var(--text-color);
+    color: var(--noti-bg);
+    margin: 0;
+    font-size: 16px;
+}
+
+.widget-dnd label {
+    color: var(--noti-bg);
+    font-size: 16px;
+    margin-left: 16px;
+}
+
+.widget-dnd > switch {
+    min-height: 28px;
+    min-width: 56px;
+    border-radius: 0;
+    padding: 0;
+    margin: 4px;
+    box-shadow: none;
+    border: none;
+    background: var(--cc-bg);
+}
+
+.widget-dnd > switch:checked {
+  background: #689d6a;
+}
+
+.widget-dnd > switch slider {
+    background: var(--noti-close-bg-hover);
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+.widget-dnd > switch slider:hover {
+    box-shadow: none;
+}
+
+.widget-dnd > switch:checked slider {
+    background: #8ec07c;
+}
+
+
+
+:root {
+  --mpris-album-art-overlay: rgba(0, 0, 0, 0.55);
+  --mpris-button-hover: rgba(0, 0, 0, 0.5);
+  --mpris-album-art-icon-size: 96px;
+}
+
+
+
+.widget-mpris {
+    background: var(--text-color);
+    color: var(--cc-bg);
+    margin: 0;
+    padding: 0;
+}
+
+.widget-mpris > box > button {
+    background: var(--text-color);
+    color: var(--cc-bg);
+    padding: 0;
+    min-width: 32px;
+    margin: 0 -32px;
+    opacity: 0;
+}
+
+.widget-mpris > box > button:hover {
+    background: var(--text-color-disabled);
+}
+
+.widget-mpris .widget-mpris-player {
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.widget-mpris .widget-mpris-player .mpris-background {
+    filter: blur(10px) brightness(0.6);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay {
+    background: var(--mpris-album-art-overlay);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay button {
+    background: var(--noti-close-bg);
+    color: var(--text-color);
+    border-radius: 4px;
+    margin: 0;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay button:hover {
+    background: var(--noti-close-bg-hover);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-title {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-subtitle {
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-album-art {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+
+.widget-buttons-grid {
+    padding: 2px;
+    margin: 0;
+    background-color: var(--text-color);
+    border-radius: 0;
+}
+
+.widget-buttons-grid.controls {
+    padding-bottom: 0;
+}
+
+.widget-buttons-grid.power {
+    padding-top: 0;
+}
+
+.widget-buttons-grid flowboxchild {
+    padding: 2px;
+    margin: 0;
+}
+
+.widget-buttons-grid flowboxchild > button {
+    border-radius: 0;
+    padding: 8px 0;
+    font-size: 20px;
+}
+
+.widget-buttons-grid flowboxchild > button.toggle:checked {
+    background: #689d6a;
+}
+
+.widget-buttons-grid flowboxchild > button.toggle:checked:hover {
+    background: #8ec07c;
+}
+
+.widget-buttons-grid flowboxchild > button.toggle,
+.widget-buttons-grid flowboxchild > button {
+    background: var(--noti-bg);
+    color: var(--text-color);
+}
+
+.widget-buttons-grid flowboxchild > button.toggle:hover,
+.widget-buttons-grid flowboxchild > button:hover {
+    background: var(--noti-bg-hover);
+}
+
+
+
+:root {
+    --widget-volume-row-icon-size: 24px;
+}
+
+.widget-volume,
+.widget-backlight {
+    padding: 4px 4px 0 4px;
+    margin: 0;
+    border-radius: 0;
+    
+    background: var(--text-color);
+    color: var(--cc-bg);
+}
+
+.widget-volume label,
+.widget-backlight label {
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.widget-volume scale,
+.widget-backlight scale {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+.widget-volume slider,
+.widget-backlight slider{
+    opacity: 0;
+}
+
+.widget-volume trough,
+.widget-backlight trough {
+    background-color: #689d6a;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    min-height: 34px;
+}
+
+.widget-volume highlight,
+.widget-backlight highlight {
+    background-color: #8ec07b;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+

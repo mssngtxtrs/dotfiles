@@ -1,0 +1,101 @@
+{
+    "name": "topbar-vertical-full",
+    "position": "right",
+    "id": "0",
+    "layer": "bottom",
+    "width": 36,
+    "margin": "4px 4px 4px 0",
+
+
+    "modules-left": [ "group/left-elements" ],
+    "modules-center": [ "group/center-elements" ],
+    "modules-right": [ "group/right-elements" ],
+
+    "include": [
+        "~/.config/waybar/base-modules.json"
+    ],
+
+
+
+    "group/left-elements": {
+        "orientation": "vertical",
+        "modules": [
+            "group/stats",
+            "custom/weather#vertical"
+        ]
+    },
+
+    "group/center-elements": {
+        "orientation": "vertical",
+        "modules": [ "hyprland/workspaces#vertical" ]
+    },
+
+    "group/right-elements": {
+        "orientation": "vertical",
+        "modules": [
+            "group/tray-drawer",
+            "hyprland/language#vertical",
+            "group/volume",
+            "group/connections",
+            "group/power",
+            "clock#vertical",
+            "custom/notification#vertical"
+        ]
+    },
+
+
+
+    "group/tray-drawer": {
+        "orientation": "vertical",
+        "modules": [
+            "custom/tray-open#vertical",
+            "tray#vertical"
+        ],
+        "drawer": {
+            "transition-left-to-right": false,
+            "click-to-reveal": false
+        }
+    },
+    
+    "group/stats": {
+        "orientation": "vertical",
+        "modules": [
+            "cpu#vertical",
+            "memory#vertical",
+            "temperature#vertical"            
+        ]
+    },
+
+    "group/power": {
+        "orientation": "vertical",
+        "modules": [
+            "battery#vertical",
+            "gamemode#vertical",
+            "power-profiles-daemon#vertical",
+            "idle_inhibitor#vertical"
+        ],
+        "drawer": {
+            "transition-left-to-right": false,
+            "click-to-reveal": false
+        }
+    },
+
+    "group/volume": {
+        "orientation": "vertical",
+        "modules": [
+            "pulseaudio#vertical"
+        ],
+        "drawer": {
+            "transition-left-to-right": false,
+            "click-to-reveal": false
+        }
+    },
+
+    "group/connections": {
+        "orientation": "vertical",
+        "modules": [
+            "network#vertical",
+            "bluetooth#vertical"
+        ]
+    }
+}

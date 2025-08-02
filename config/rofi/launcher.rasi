@@ -1,0 +1,78 @@
+configuration {
+    modes: [ drun, window, run ];
+    icon-theme: 'Gruvbox-Plus-Dark';
+}
+
+@theme 'gruvbox-dark'
+
+window {
+    border-color: #ebdbb2;
+    border: 1px solid;
+    font: 'Adwaita Sans 14';
+    location: center;
+    width: calc(80% - 8px - 24px);
+    height: calc(73.19% - 8px - 24px);
+    margin: 0;
+    padding: 0;
+}
+
+listview {
+    columns: 6;
+    fixed-columns: true;
+    flow: horizontal;
+    spacing: 12px;
+    background-color: #282828;
+    text-color: #ebdbb2;
+    padding: 10px 0 10px 12px;
+    border: none;
+    scrollbar-width: 8px;
+}
+
+inputbar {
+    padding: 12px;
+    border: none;
+    background-color: #ebdbb2;
+    text-color: #282828;
+
+    children: [ entry ];
+}
+
+entry {
+    background-color: #ebdbb2;
+    text-color: #282828;
+    placeholder: 'Поиск...';
+    font: 'Adwaita Sans 14';
+}
+
+element {
+    background: #282828;
+    color: #ebdbb2;
+    orientation: vertical;
+    children: [ element-icon, element-text  ];
+    spacing: 5px;
+}
+
+element alternate.normal {
+    background-color: #282828;
+    text-color: #ebdbb2;
+}
+
+element selected.normal {
+    background-color: #ebdbb2;
+    color: #282828;
+}
+
+element-icon {
+    size: 92px;
+    padding: 12px 12px 6px 12px;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    padding: 6px 12px 12px 12px;
+    font: 'Adwaita Sans 16px';
+}
+
+mode-switcher {
+    enabled: true;
+}

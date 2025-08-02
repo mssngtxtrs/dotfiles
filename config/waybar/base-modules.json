@@ -1,0 +1,423 @@
+{
+    "hyprland/language#horizontal": {
+        "format": "{}",
+        "format-en": "en",
+        "format-ru": "ru",
+        "keyboard-name": "at-translated-set-2-keyboard",
+        "on-click": "hyprctl switchxkblayout all next"
+    },
+
+    "hyprland/workspaces#horizontal": {
+        "format": "{id}",
+        "on-scroll-up": "hyprctl dispatch workspace r+1",
+        "on-scroll-down": "hyprctl dispatch workspace r-1"
+
+    },
+
+    "hyprland/window#horizontal": {
+        "format": "{title}",
+        "tooltip-format": "{title}\n{class}",
+        "on-click": "pgrep -x rofi >/dev/null 2>&1 && killall rofi || rofi -show drun -config launcher.rasi",
+        "on-click-right": "pgrep -x rofi >/dev/null 2>&1 && killall rofi || rofi -modi drun,run,window,calc,filebrowser -show window -config search.rasi"
+    },
+
+    "idle_inhibitor#horizontal": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip-format-activated": "Активен",
+        "tooltip-format-deactivated": "Неактивен"
+    },
+
+    "tray#horizontal": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+
+    "custom/tray-open#horizontal": {
+        "format": "󰅁",
+        "tooltip": false
+    },
+
+    "clock#horizontal": {
+        "format": "{:L%A, %d %B, %H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode"          : "year",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+                "months":     "<span color='#ebdbb2'><b>{}</b></span>",
+                "days":       "<span color='#ebdbb2'><b>{}</b></span>",
+                "weeks":      "<span color='#a89984'><b>{}</b></span>",
+                "weekdays":   "<span color='#a89984'><b>{}</b></span>",
+                "today":      "<span color='#cc241d'><b>{}</b></span>"
+            }
+        },
+        "actions":  {
+            "on-click-middle": "mode",
+            "on-scroll-up": "tz_up",
+            "on-scroll-down": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        },
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=io.github.alainm23.planify io.github.alainm23.planify"
+    },
+
+    "cpu#horizontal": {
+        "format": " {usage}%",
+        "tooltip": true,
+        "tooltip-format": "Использование процессора: {usage}%\nЧастота: {avg_frequency} GHz",
+        "on-click": "GTK_THEME=Gruvbox-Teal-Dark-Medium missioncenter",
+        "interval": 5
+    },
+
+    "memory#horizontal": {
+        "format": " {used:.1f} GiB",
+        "tooltip-format": "Память: {used:.2f} / {total:.2f} GiB\nПодкачка: {swapUsed:.2f} / {swapTotal:.2f} GiB",
+        "on-click": "GTK_THEME=Gruvbox-Teal-Dark-Medium missioncenter",
+        "interval": 5
+    },
+
+    "temperature#horizontal": {
+        "critical-threshold": 95,
+        "format": " {temperatureC}°C",
+        "tooltip-format": "Температура: {temperatureC}°C",
+        "on-click": "GTK_THEME=Gruvbox-Teal-Dark-Medium missioncenter",
+        "interval": 5
+    },
+
+    "battery#horizontal": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "interval": 2,
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format-charging": "Подключен, заряжается, осталось {time}\nЗдоровье аккумулятора: {health}%",
+        "tooltip-format-plugged": "Подключен, не заряжается\nЗдоровье аккумулятора: {health}%",
+        "tooltip-format-discharging": "Отключен, осталось {time}\nЗдоровье аккумулятора: {health}%"
+    },
+
+    "power-profiles-daemon#horizontal": {
+      "format": "{icon}",
+      "tooltip-format": "Профиль: {profile}\nДрайвер: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+
+    "gamemode#horizontal": {
+        "format": " {count}",
+        "glyph": "",
+        "hide-not-running": true,
+        "use-icon": false,
+        "icon-spacing": 0,
+        "icon-size": 0,
+        "tooltip": true,
+        "tooltip-format": "{count} игр запущено"
+    },
+
+    "network#horizontal": {
+        "format-wifi": "{icon}",
+        "format-ethernet": "",
+        "format-disabled": "⚠",
+        "tooltip-format": " {ifname} через {gwaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)  {ifname} через {gwaddr}",
+        "tooltip-format-ethernet": "{ipaddr}/{cidr}  {ifname} через {gwaddr}",
+        "tooltip-format-disconnected": "Нет подключения",
+        "tooltip-format-disabled": "Отключен",
+        "format-disconnected": "",
+        "format-icons": [
+            "󰤟", "󰤢", "󰤥", "󰤨"
+        ],
+        "on-click": "nm-connection-editor",
+        "on-click-right": "sh -c '[[ $(nmcli radio wifi) =~ \"enabled\" ]] && nmcli radio wifi off || nmcli radio wifi on'"
+    },
+
+    "pulseaudio#horizontal": {
+        "format": "{icon}",
+        "format-bluetooth": "{icon}",
+        "format-bluetooth-muted": "",
+        "format-muted": "",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "tooltip-format": "Громкость: {volume}%\n{desc}",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click": "pavucontrol"
+    },
+
+    "custom/weather#horizontal": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar --nerd -l ru --custom-indicator \"{ICON}  {temp_C}°C\"",
+        "return-type": "json"
+    },
+
+    "bluetooth#horizontal": {
+        "format-on": "󰂯",
+        "format-off": "󰂲",
+        "format-disabled": "",
+        "format-connected": "󰂱",
+        "tooltip-format-off": "Bluetooth отключен",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "GTK_THEME=Gruvbox-Teal-Dark-Medium overskride",
+        "on-click-right": "sh -c '[[ $(bluetoothctl show 5C:C3:36:F6:DB:3B | grep \"PowerState\") =~ \"PowerState: on\" ]] && bluetoothctl power off || bluetoothctl power on'"
+    },
+
+
+
+
+
+    "custom/notification#vertical": {
+        "justify": "center",
+        "tooltip-format": "{} уведомлений",
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂚",
+            "dnd-notification": "󰂠",
+            "dnd-none": "󰂠",
+            "inhibited-notification": "󰂛",
+            "inhibited-none": "󰂛",
+            "dnd-inhibited-notification": "󰂛",
+            "dnd-inhibited-none": "󰂛"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+
+    "hyprland/language#vertical": {
+        "justify": "center",
+        "format": "{}",
+        "format-en": "en",
+        "format-ru": "ru",
+        "keyboard-name": "at-translated-set-2-keyboard",
+        "on-click": "hyprctl switchxkblayout all next"
+    },
+
+    "hyprland/workspaces#vertical": {
+        "justify": "center",
+        "format": "{id}",
+        "on-scroll-up": "hyprctl dispatch workspace r+1",
+        "on-scroll-down": "hyprctl dispatch workspace r-1"
+
+    },
+
+    "idle_inhibitor#vertical": {
+        "justify": "center",
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip-format-activated": "Активен",
+        "tooltip-format-deactivated": "Неактивен"
+    },
+
+    "tray#vertical": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+
+    "custom/tray-open#vertical": {
+        "justify": "center",
+        "format": "",
+        "tooltip": false
+    },
+
+    "clock#vertical": {
+        "justify": "center",
+        "format": "{:L%H\n%M}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode"          : "year",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+                "months":     "<span color='#ebdbb2'><b>{}</b></span>",
+                "days":       "<span color='#ebdbb2'><b>{}</b></span>",
+                "weeks":      "<span color='#a89984'><b>{}</b></span>",
+                "weekdays":   "<span color='#a89984'><b>{}</b></span>",
+                "today":      "<span color='#cc241d'><b>{}</b></span>"
+            }
+        },
+        "actions":  {
+            "on-click-right": "mode",
+            "on-scroll-up": "tz_up",
+            "on-scroll-down": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        },
+        "on-click": "/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=io.github.alainm23.planify io.github.alainm23.planify"
+    },
+
+    "cpu#vertical": {
+        "justify": "center",
+        "format": "{usage}%",
+        "tooltip": true,
+        "tooltip-format": "Использование процессора: {usage}%\nЧастота: {avg_frequency} GHz",
+        "on-click": "GTK_THEME=Gruvbox-Teal-Dark-Medium missioncenter",
+        "interval": 5
+    },
+
+    "memory#vertical": {
+        "justify": "center",
+        "format": "{used:.1f}\nGiB",
+        "tooltip-format": "Память: {used:.2f} / {total:.2f} GiB\nПодкачка: {swapUsed:.2f} / {swapTotal:.2f} GiB",
+        "on-click": "GTK_THEME=Gruvbox-Teal-Dark-Medium missioncenter",
+        "interval": 5
+    },
+
+    "temperature#vertical": {
+        "justify": "center",
+        "critical-threshold": 95,
+        "format": "{temperatureC}°C",
+        "tooltip-format": "Температура: {temperatureC}°C",
+        "on-click": "GTK_THEME=Gruvbox-Teal-Dark-Medium missioncenter",
+        "interval": 5
+    },
+
+    "battery#vertical": {
+        "justify": "center",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "interval": 2,
+        "format": "{capacity}%\n{icon}",
+        "format-full": "{capacity}%\n{icon}",
+        "format-charging": "{capacity}%\n",
+        "format-plugged": "{capacity}%\n",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip-format-charging": "Подключен, заряжается, осталось {time}\nЗдоровье аккумулятора: {health}%",
+        "tooltip-format-plugged": "Подключен, не заряжается\nЗдоровье аккумулятора: {health}%",
+        "tooltip-format-discharging": "Отключен, осталось {time}\nЗдоровье аккумулятора: {health}%"
+    },
+
+    "power-profiles-daemon#vertical": {
+        "justify": "center",
+        "format": "{icon}",
+        "tooltip-format": "Профиль: {profile}\nДрайвер: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+
+    "gamemode#vertical": {
+        "justify": "center",
+        "format": "\n{count}",
+        "glyph": "",
+        "hide-not-running": true,
+        "use-icon": false,
+        "icon-spacing": 0,
+        "icon-size": 0,
+        "tooltip": true,
+        "tooltip-format": "{count} игр запущено"
+    },
+
+    "network#vertical": {
+        "justify": "center",
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disabled": "⚠",
+        "tooltip-format": " {ifname} через {gwaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)  {ifname} через {gwaddr}",
+        "tooltip-format-ethernet": "{ipaddr}/{cidr}  {ifname} через {gwaddr}",
+        "tooltip-format-disconnected": "Нет подключения",
+        "tooltip-format-disabled": "Отключен",
+        "format-disconnected": "",
+        "format-icons": [
+            "󰤟", "󰤢", "󰤥", "󰤨"
+        ],
+        "on-click": "nm-connection-editor",
+        "on-click-right": "sh -c '[[ $(nmcli radio wifi) =~ \"enabled\" ]] && nmcli radio wifi off || nmcli radio wifi on'"
+    },
+
+    "pulseaudio#vertical": {
+        "justify": "center",
+        "format": "{icon}",
+        "format-bluetooth": "{icon}",
+        "format-bluetooth-muted": "",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "tooltip-format": "Громкость: {volume}%\n{desc}",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click": "pavucontrol"
+    },
+
+    "custom/weather#vertical": {
+        "justify": "center",
+        "format": "{}",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar --nerd -l ru --custom-indicator \"{temp_C}°C\"",
+        "return-type": "json"
+    },
+
+    "bluetooth#vertical": {
+        "justify": "center",
+        "format-on": "󰂯",
+        "format-off": "󰂲",
+        "format-disabled": "",
+        "format-connected": "󰂱",
+        "tooltip-format-off": "Bluetooth отключен",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "GTK_THEME=Gruvbox-Teal-Dark-Medium overskride",
+        "on-click-right": "sh -c '[[ $(bluetoothctl show 5C:C3:36:F6:DB:3B | grep \"PowerState\") =~ \"PowerState: on\" ]] && bluetoothctl power off || bluetoothctl power on'"
+    },
+
+
+
+
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "tooltip-format": "{title}\n{name}",
+        "icon-theme": "Gruvbox-Plus-Dark",
+        "icon-size": 56,
+        "on-click": "minimize-raise",
+        "on-click-middle": "close"
+    },
+    
+    "custom/apps": {
+        "format": "󰀻",
+        "tooltip-format": "Приложения",
+        "on-click": "pgrep -x rofi >/dev/null 2>&1 && killall rofi || rofi -show drun -config launcher.rasi"
+    }
+}

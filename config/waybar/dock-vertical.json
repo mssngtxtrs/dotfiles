@@ -1,0 +1,25 @@
+{
+    "name": "dock-vertical",
+    "position": "left",
+    "id": "1",
+    "mode": "dock",
+    "layer": "bottom",
+    "exclusive": false,
+    "margin": "0 0 0 -76px",
+
+    "modules-left": [],
+    "modules-center": [ "group/dockgroup#vertical" ],
+    "modules-right": [],
+
+    "include": [
+        "~/.config/waybar/base-modules.json"
+    ],
+
+    "group/dockgroup#vertical": {
+        "orientation": "vertical",
+        "modules": [
+            "custom/apps",
+            "wlr/taskbar"
+        ]
+    }
+}
