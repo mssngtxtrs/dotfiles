@@ -1,5 +1,8 @@
 # Dotfiles
-My dotfiles
+Here are my dotfiles.
+
+## About
+These dotfiles are used on laptop (Redmibook Pro 15 2023) with Arch Linux installed.
 
 ## Requirements
 Required software:
