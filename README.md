@@ -13,3 +13,4 @@ Required software:
 - waybar
 - SwayNC
 - SwayOSD
+Also bluez used for bluetooth and brightnessctl tor brightness control.
