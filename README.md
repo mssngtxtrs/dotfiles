@@ -17,6 +17,6 @@ Required software:
 - kitty
 - Nemo
 - Overskride
-- broghtnessctl
+- brightnessctl
 
 Also, I used [Gruvbox GTK Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) in my configs.
