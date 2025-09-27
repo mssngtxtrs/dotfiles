@@ -1,11 +1,12 @@
 # Dotfiles
-Here are my dotfiles.
 
 ## About
-These dotfiles are used on laptop (Redmibook Pro 15 2023) with Arch Linux installed.
-All labels are written in russian, but i'll try to make english translation soon.
+These are my dotfoles that I use on my desktop.
 
 ## Requirements
+
+### Arch Linux
+
 Required software:
 - Hyprland (with Hyprlock, Hypridle)
 - Hyprshot
@@ -16,7 +17,7 @@ Required software:
 - SwayOSD
 - kitty
 - Nemo
-- Overskride
+- Overskride, (flatpak version)
 - brightnessctl
 
 Also, I used [Gruvbox GTK Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) in my configs.
