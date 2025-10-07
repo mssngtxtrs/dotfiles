@@ -21,7 +21,9 @@ Hyprland
  - Hyprshot
  - Hyprlock
  - Hypridle
+ - Hyprpicker
  - Hyprland Policy kit Agent (hyprpolkitagent)
+ - Hyprland XDG Desktop Portal
  - swww
  - Rofi
  - Waybar
@@ -151,8 +153,8 @@ This script will automatically install all needed packages and copy configuratio
 
 2. Install needed packages
 
-`sudo pacman -S hyprland hyprlock hypridle hyprshot swww rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim code mission-center`
+`sudo pacman -S hyprland hyprlock hypridle hyprshot swww rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim code mission-center gnome-software packagekit`
 
 3. Copy files from `config` folder to `~/.config`
 
-`cp ./config ~/.config`
+`cp -r ./config ~/.config`

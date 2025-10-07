@@ -15,7 +15,7 @@ if [ -f /etc/os-release ]; then
 	echo "=  Installing hyprland and programs...  ="
 	echo "========================================="
 
-	sudo pacman -S hyprpolkitagent hyprland hyprlock hypridle hyprshot swww rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim code mission-center --noconfirm
+	sudo pacman -S hyprpolkitagent xdg-desktop-portal-hyprland hyprpicker hyprland hyprlock hypridle hyprshot swww rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim code mission-center gnome-software packagekit --noconfirm
 
 	echo "===================================="
 	echo "=  Copying configuration files...  ="
