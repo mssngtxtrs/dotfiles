@@ -137,8 +137,6 @@ This sections contains info about used keybinds and gestures
 
 `Super + B` - Open bluetooth settings (overskride)
 
-`Super + P` - Open notes (planify)
-
 `Super + I` - Open IDE (code)
 
 ### Gestures
