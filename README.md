@@ -21,6 +21,7 @@ Hyprland
  - Hyprshot
  - Hyprlock
  - Hypridle
+ - Hyprland Policy kit Agent (hyprpolkitagent)
  - swww
  - Rofi
  - Waybar
@@ -34,9 +35,10 @@ Hyprland
 
  - Nemo 
  - Kitty 
- - Mission Center 
- - Visual Studio Code 
+ - Mission Center
+ - Visual Studio Code
  - Neovim 
+ - GNOME Software Manager
 
 #### Flatpak
 
@@ -136,4 +138,21 @@ Hyprland
 
 ### Arch linux
 
-Work in progress...
+#### Install with script
+
+`$ chmod +x install.sh && install.sh`
+
+This script will automatically install all needed packages and copy configuration files
+
+#### Manual install
+
+1. Update the system
+`sudo pacman -Syu`
+
+2. Install needed packages
+
+`sudo pacman -S hyprland hyprlock hypridle hyprshot swww rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim code mission-center`
+
+3. Copy files from `config` folder to `~/.config`
+
+`cp ./config ~/.config`
