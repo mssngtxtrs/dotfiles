@@ -40,7 +40,7 @@ Hyprland
  - Mission Center
  - Visual Studio Code
  - Neovim 
- - GNOME Software Manager
+ - GNOME Software
 
 #### Flatpak
 
