@@ -1,8 +1,9 @@
 # Dotfiles
 
-[About](#about) | [Installation](#installation)
+[About](#about) | [Manual](#manual) | [Installation](#installation)
 
 ## About
+<a name="about"></a>
 
 My dotfiles that I use on my Arch Linux desktop with installation instruction.
 
@@ -52,6 +53,11 @@ Hyprland
  - [Gruvbox GTK Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) by Fausto-Korpsvart
  - [Gruvbox Kitty theme](https://github.com/wdomitrz/kitty_gruvbox_theme) by wdomitrz
  - Adwaita Mono, Adwaita Sans fonts
+
+## Manual
+<a name="manual"></a>
+
+This sections contains info about used keybinds and gestures
 
 ### Shortcuts
 
@@ -135,6 +141,22 @@ Hyprland
 
 `Super + I` - Open IDE (code)
 
+### Gestures
+
+All gestures presented in this format: `fingers, gesture[, mod]`
+
+#### Workspaces and windows
+
+`3/4, horizontal swipe` - Switch workspaces
+`4, pinch out` - Toggle floating for active window (float)
+`4, pinch in` - Toggle floating for active window (tile)
+`3, any direction, Alt` - Resize active window
+
+#### Rofi
+
+`3, swipe up` - Open app launcher
+`3, swipe down` - Open window switcher
+
 ## Installation
 <a name="installation"></a>
 
@@ -144,17 +166,18 @@ Hyprland
 
 `$ chmod +x install.sh && install.sh`
 
-This script will automatically install all needed packages and copy configuration files
+This script will automatically install all required packages and copy configuration files
 
 #### Manual install
 
 1. Update the system
+
 `sudo pacman -Syu`
 
 2. Install needed packages
 
-`sudo pacman -S hyprland hyprlock hypridle hyprshot swww rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim code mission-center gnome-software packagekit`
+`sudo pacman -S hyprland hyprlock hypridle hyprshot rofi-calc swww rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim code mission-center gnome-software packagekit`
 
 3. Copy files from `config` folder to `~/.config`
 
-`cp -r ./config ~/.config`
+`cp -r ./config/* ~/.config/`
