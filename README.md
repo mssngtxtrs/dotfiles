@@ -52,6 +52,8 @@ Hyprland
  - [Rofi Bluetooth scrpit](https://github.com/nickclyde/rofi-bluetooth) by nickclyde
  - Adwaita Mono, Adwaita Sans fonts
 
+It is also highly recommended to install Font Awesome 6 manually!
+
 ## Manual
 <a name="manual"></a>
 
