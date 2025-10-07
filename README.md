@@ -148,13 +148,17 @@ All gestures presented in this format: `fingers, gesture[, mod]`
 #### Workspaces and windows
 
 `3/4, horizontal swipe` - Switch workspaces
+
 `4, pinch out` - Toggle floating for active window (float)
+
 `4, pinch in` - Toggle floating for active window (tile)
+
 `3, any direction, Alt` - Resize active window
 
 #### Rofi
 
 `3, swipe up` - Open app launcher
+
 `3, swipe down` - Open window switcher
 
 ## Installation
