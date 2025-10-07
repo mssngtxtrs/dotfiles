@@ -6,6 +6,8 @@
 
 My dotfiles that I use on my Arch Linux desktop with installation instruction.
 
+Heavily inspired by gruvbox theme by morhetz.
+
 ### Used distro
 
 Arch linux
@@ -42,8 +44,10 @@ Hyprland
 
 ### Other used resources
 
- - [Gruvbox GTK Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) from Fausto-Korpsvart
- - Adwaita Mono, Adwaita Sans
+ - [Gruvbox theme](https://github.com/morhetz/gruvbox) by morhetz
+ - [Gruvbox GTK Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) by Fausto-Korpsvart
+ - [Gruvbox Kitty theme](https://github.com/wdomitrz/kitty_gruvbox_theme) by wdomitrz
+ - Adwaita Mono, Adwaita Sans fonts
 
 ### Shortcuts
 
