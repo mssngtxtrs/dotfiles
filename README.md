@@ -43,15 +43,13 @@ Hyprland
  - Neovim 
  - GNOME Software
 
-#### Flatpak
-
- - Overskride 
-
 ### Other used resources
 
  - [Gruvbox theme](https://github.com/morhetz/gruvbox) by morhetz
  - [Gruvbox GTK Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) by Fausto-Korpsvart
  - [Gruvbox Kitty theme](https://github.com/wdomitrz/kitty_gruvbox_theme) by wdomitrz
+ - [Rofi Network Manager script](https://github.com/meowrch/rofi-network-manager) by meowrch
+ - [Rofi Bluetooth scrpit](https://github.com/nickclyde/rofi-bluetooth) by nickclyde
  - Adwaita Mono, Adwaita Sans fonts
 
 ## Manual
@@ -115,7 +113,9 @@ This sections contains info about used keybinds and gestures
 
 `Super + R` - Open runner
 
-`Super + Z` - Wallpaper changer
+`Super + Z` - Open wallpaper changer
+
+`Super + B` - Open bluetooth settings
 
 #### Utilities
 
@@ -134,8 +134,6 @@ This sections contains info about used keybinds and gestures
 `Super + T` - Open terminal (kitty)
 
 `Control + Shift + Escape` - Open task manager (missioncenter)
-
-`Super + B` - Open bluetooth settings (overskride)
 
 `Super + I` - Open IDE (code)
 
