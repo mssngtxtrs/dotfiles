@@ -136,7 +136,7 @@ window#waybar #workspaces-container:hover {
 }
 
 #workspaces .taskbar-window {
-    padding-left: 4px;
+    padding: 0 2px;
 }
 
 #cpu {
