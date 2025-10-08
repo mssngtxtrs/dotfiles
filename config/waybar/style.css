@@ -24,186 +24,102 @@
     font-weight: 600;
 }
 
-window.topbar-vertical-full#waybar,
-window.topbar-horizontal-full#waybar {
-    background: @background;
-    border: 1px solid @foreground;
-    color: @foreground;
-    margin: 0;
-    padding: 0;
-}
-
-window.topbar-vertical-full#waybar #left-elements,
-window.topbar-vertical-full#waybar #center-elements,
-window.topbar-vertical-full#waybar #right-elements,
-window.topbar-horizontal-full#waybar #left-elements,
-window.topbar-horizontal-full#waybar #center-elements,
-window.topbar-horizontal-full#waybar #right-elements {
-    background: none;
-    border: none;
-    margin: 1px;
-}
-
-window.dock-horizontal#waybar,
-window.dock-vertical#waybar,
-window.topbar-vertical-opaque#waybar,
-window.topbar-horizontal-opaque#waybar {
+window#waybar {
     background: none;
     border: none;
     margin: 0;
     padding: 0;
 }
 
-#dockgroup,
-window.topbar-vertical-opaque#waybar #left-elements,
-window.topbar-vertical-opaque#waybar #center-elements,
-window.topbar-vertical-opaque#waybar #right-elements,
-window.topbar-horizontal-opaque#waybar #left-elements,
-window.topbar-horizontal-opaque#waybar #center-elements,
-window.topbar-horizontal-opaque#waybar #right-elements {
-    background: @background;
+window#waybar #left-elements,
+window#waybar #center-elements,
+window#waybar #right-elements {
     border: 1px solid @foreground;
-    color: @foreground;
+    border-radius: 8px;
     margin: 0;
     padding: 0;
     transition: .1s ease-out;
 }
 
-#clock.horizontal,
-#cpu.horizontal,
-#memory.horizontal,
-#disk.horizontal,
-#temperature.horizontal,
-#network.horizontal,
-#bluetooth.horizontal,
-#pulseaudio.horizontal,
-#mode.horizontal,
-#idle_inhibitor.horizontal,
-#battery.horizontal,
-#power-profiles-daemon.horizontal,
-#language.horizontal,
-#custom-notification.horizontal,
-#custom-weather.horizontal,
-#custom-gpu-usage.horizontal,
-#gamemode.horizontal,
+window#waybar #left-elements,
+window#waybar #center-elements {
+    background: @background;
+    color: @foreground;
+}
+
+window#waybar #right-elements {
+    background: @foreground;
+    color: @background;
+    margin-left: 4px;
+}
+
+#clock,
+#cpu,
+#memory,
+#temperature,
+#network,
+#bluetooth,
+#pulseaudio,
+#idle_inhibitor,
+#battery,
+#power-profiles-daemon,
+#language,
+#custom-weather,
+#gamemode,
 #window {
     padding: 0 10px;
-}
-
-#workspaces.horizontal button {
-    padding: 0 5px;
-}
-
-#custom-tray-open.horizontal {
-    padding: 0 6px;
-}
-
-#tray.horizontal {
-    padding-left: 10px;
-}
-
-#pulseaudio-slider.horizontal trough {
-    min-height: 26px;
-    min-width: 75px;
-}
-
-#dockgroup.horizontal {
-    margin-bottom: 4px
-}
-
-#dockgroup.horizontal:hover {
-    margin-bottom: 76px;
-}
-
-#clock.vertical,
-#cpu.vertical,
-#memory.vertical,
-#disk.vertical,
-#temperature.vertical,
-#network.vertical,
-#bluetooth.vertical,
-#pulseaudio.vertical,
-#mode.vertical,
-#idle_inhibitor.vertical,
-#battery.vertical,
-#power-profiles-daemon.vertical,
-#language.vertical,
-#custom-notification.vertical,
-#custom-weather.vertical,
-#custom-gpu-usage.vertical,
-#gamemode.vertical {
-    padding: 10px 0;
-}
-
-#workspaces.vertical button {
-    padding: 5px 0;
-}
-
-#custom-tray-open.vertical {
-    padding: 6px 0;
-}
-
-#tray.vertical {
-    padding-top: 10px;
-}
-
-#pulseaudio-slider.vertical trough {
-    min-height: 75px;
-    min-width: 34px;
-}
-
-#dockgroup.vertical {
-    margin-left: 4px
-}
-
-#dockgroup.vertical:hover {
-    margin-left: 76px;
-}
-
-#clock.vertical,
-#battery.vertical,
-#language.vertical {
-    font-family: 'Adwaita Mono';
+    transition: .3s;
 }
 
 #workspaces button {
-    color: @foreground;
+    padding: 0 5px;
+}
+
+#custom-tray-open {
+    padding: 0 6px;
+}
+
+#tray {
+    padding: 0 10px;
+}
+
+#workspaces button {
     transition: .3s;
     border-radius: 0;
 }
 
 #workspaces button:hover {
+    transition: .3s;
     background: @background-hover;
     border-radius: 0;
 }
 
 #workspaces button.active {
+    transition: .3s;
     background: @foreground;
     color: @background;
+    border-radius: 0;
 }
 
 #workspaces button.active:hover {
+    transition: .3s;
     background: @foreground-hover;
+    border-radius: 0;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+#workspaces .taskbar-window {
+    padding-left: 4px;
 }
 
 #cpu {
     background: @blue;
     transition: .3s;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
 
 #cpu:hover {
     background: @blue-hover;
-    transition: .3s;
 }
 
 #memory {
@@ -213,7 +129,6 @@ window.topbar-horizontal-opaque#waybar #right-elements {
 
 #memory:hover {
     background: @green-hover;
-    transition: .3s;
 }
 
 #temperature {
@@ -223,235 +138,46 @@ window.topbar-horizontal-opaque#waybar #right-elements {
 
 #temperature:hover {
     background: @yellow-hover;
-    transition: .3s;
 }
 
 #temperature.critical {
     background: @orange;
-    transition: .3s;
 }
 
 #temperature.critical:hover {
     background: @orange-hover;
-    transition: .3s;
-}
-
-#battery,
-#power-profiles-daemon,
-#idle_inhibitor {
-    background: @foreground;
-    color: @background;
-    transition: .3s;
-}
-
-#battery:hover,
-#power-profiles-daemon:hover,
-#idle_inhibitor:hover {
-    background: @foreground-hover;
-    transition: .3s;
-}
-
-#pulseaudio {
-    background: @foreground;
-    color: @background;
-    transition: .3s;
-}
-
-#pulseaudio:hover {
-    background: @foreground-hover;
-    transition: .3s;
-}
-
-#pulseaudio-slider {
-    margin: 0;
-    padding: 0;
-    transition: .3s;
-    background: @foreground;
-}
-
-#pulseaudio-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 0;
-    background: none;
-    border: none;
-    box-shadow: none;
-    transition: .3s;
-}
-
-#pulseaudio-slider trough {
-    background: @aqua;
-    border-radius: 0;
-    transition: .3s;
-}
-
-#pulseaudio-slider highlight {
-    background: @aqua-hover;
-    border-radius: 0;
-    transition: .3s;
-}
-
-#network.wifi {
-    font-size: 20px;
-}
-
-#network {
-    background: @foreground;
-    color: @background;
-    transition: .3s;
-    font-size: 11px;
-}
-
-#network.disabled {
-    background: @background-alt;
-    transition: .3s;
-}
-
-#network:hover,
-#network.disabled:hover {
-    background: @foreground-hover;
-    transition: .3s;
-}
-
-#clock {
-    background: @foreground;
-    color: @background;
-    transition: .3s;
-}
-
-#clock:hover {
-    background: @foreground-hover;
-    transition: .3s;
-}
-
-#language {
-    background: @foreground;
-    color: @background;
-    min-width: 16px;
-    transition: .3s;
-}
-
-#language:hover {
-    background: @foreground-hover;
-    transition: .3s;
-}
-
-#custom-notification {
-    background: @foreground;
-    color: @background;
-    font-size: 13px;
-    transition: .3s;
-}
-
-#custom-notification:hover {
-    background: @foreground-hover;
-    transition: .3s;
 }
 
 #custom-weather {
     background: @purple;
-    color: @foreground;
-    transition: .3s;
 }
 
 #custom-weather:hover {
     background: @purple-hover;
-    transition: .3s;
 }
 
-#bluetooth {
-    background: @foreground;
-    color: @background;
-    transition: .3s;
-    font-size: 14px;
-}
-
-#bluetooth.disabled {
-    background: @background-alt;
-    transition: .3s;
-}
-
-#bluetooth:hover,
-#bluetooth.disabled:hover {
-    background: @foreground-hover;
-    transition: .3s;
-}
-
-#tray,
-#tray > .passive,
-#tray > .active,
-#tray > .needs-attention {
-    color: @foreground;
-}
-
-#taskbar button {
+#tray {
     background: @background;
-    color: #ebdbb2;
-    margin: 0 1px;
-    transition: .3s;
-    border-radius: 0;
+    color: @foreground;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
 
-#gamemode {
-    background: @foreground;
-    color: @background;
-    transition: .3s;
+#clock {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
 }
 
+#battery:hover,
+#power-profiles-daemon:hover,
+#idle-inhibitor:hover,
+#pulseaudio:hover,
+#network:hover,
+#network.disabled:hover,
+#clock:hover,
+#language:hover,
+#bluetooth:hover,
+#bluetooth.disabled:hover,
 #gamemode:hover {
     background: @foreground-hover;
-    transition: .3s;
-}
-
-#custom-tray-open {
-    background: @background;
-    color: @foreground;
-    transition: .3s;
-    font-size: 12px;
-}
-
-#custom-gpu-usage {
-    background: @red;
-    color: @foreground;
-    transition: .3s;
-}
-
-#custom-gpu-usage:hover {
-    background: @red-hover;
-    transition: .3s;
-}
-
-
-
-#taskbar button,
-#custom-apps {
-    margin: 0;
-}
-
-#taskbar button:hover {
-    background: @background-alt;
-    transition: .3s;
-}
-
-#taskbar button.active {
-    background: @foreground;
-    color: @background;
-    transition: .3s;
-}
-#taskbar button.active:hover {
-    background: @foreground-hover;
-    transition: .3s;
-}
-
-#custom-apps {
-    font-size: 48px;
-    min-width: 72px;
-    min-height: 72px;
-    background: @background;
-    color: @foreground;
-    transition: .3s;
-}
-#custom-apps:hover {
-    background: @background-alt;
-    transition: .3s;
 }

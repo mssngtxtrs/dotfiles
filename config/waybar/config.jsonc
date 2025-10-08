@@ -1,27 +1,7 @@
 [
     {
         "include": [
-            "~/.config/waybar/topbar-horizontal-full.json"
+            "~/.config/waybar/topbar.json"
         ]
-    }/**//*{
-        "include": [
-            "~/.config/waybar/topbar-horizontal-opaque.json"
-        ]
-    }/**//*{
-        "include": [
-            "~/.config/waybar/topbar-vertical-full.json"
-        ]
-    }/**//*{
-        "include": [
-            "~/.config/waybar/topbar-vertical-opaque.json"
-        ]
-    }/**//*,{
-        "include": [
-            "~/.config/waybar/dock-horizontal.json"
-        ]
-    }/**//*,{
-        "include": [
-            "~/.config/waybar/dock-vertical.json"
-        ]
-    }/**/
+    }
 ]

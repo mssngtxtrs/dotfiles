@@ -1,14 +1,15 @@
 {
-    "name": "topbar-horizontal-full",
+    "name": "topbar",
     "position": "top",
     "id": "0",
     "layer": "bottom",
     "height": 28,
+    "fixed-center": false,
     "margin": "4px 4px 0 4px",
 
 
     "modules-left": [ "group/left-elements" ],
-    "modules-center": [ "group/center-elements" ],
+    "modules-center": [  ],
     "modules-right": [ "group/right-elements" ],
 
     "include": [
@@ -21,26 +22,21 @@
         "orientation": "horizontal",
         "modules": [
             "group/stats",
-            "custom/weather#horizontal",
-            "hyprland/workspaces#horizontal"
+            "custom/weather",
+            "hyprland/workspaces",
+	    "hyprland/window"
         ]
-    },
-
-    "group/center-elements": {
-        "orientation": "horizontal",
-        "modules": [ "hyprland/window#horizontal" ]
     },
 
     "group/right-elements": {
         "orientation": "horizontal",
         "modules": [
             "group/tray-drawer",
-            "hyprland/language#horizontal",
+            "hyprland/language",
             "group/volume",
             "group/connections",
             "group/power",
-            "clock#horizontal",
-            "custom/notification#horizontal"
+            "clock"
         ]
     },
 
@@ -49,8 +45,8 @@
     "group/tray-drawer": {
         "orientation": "horizontal",
         "modules": [
-            "custom/tray-open#horizontal",
-            "tray#horizontal"
+            "custom/tray-open",
+            "tray"
         ],
         "drawer": {
             "transition-left-to-right": false,
@@ -61,19 +57,19 @@
     "group/stats": {
         "orientation": "horizontal",
         "modules": [
-            "cpu#horizontal",
-            "memory#horizontal",
-            "temperature#horizontal"            
+            "cpu",
+            "memory",
+            "temperature"            
         ]
     },
 
     "group/power": {
         "orientation": "horizontal",
         "modules": [
-            "battery#horizontal",
-            "gamemode#horizontal",
-            "power-profiles-daemon#horizontal",
-            "idle_inhibitor#horizontal"
+            "battery",
+            "gamemode",
+            "power-profiles-daemon",
+            "idle_inhibitor"
         ],
         "drawer": {
             "transition-left-to-right": false,
@@ -84,7 +80,7 @@
     "group/volume": {
         "orientation": "horizontal",
         "modules": [
-            "pulseaudio#horizontal"
+            "pulseaudio"
         ],
         "drawer": {
             "transition-left-to-right": false,
@@ -95,8 +91,8 @@
     "group/connections": {
         "orientation": "horizontal",
         "modules": [
-            "network#horizontal",
-            "bluetooth#horizontal"
+            "network",
+            "bluetooth"
         ]
     }
 }
