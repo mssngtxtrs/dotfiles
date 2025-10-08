@@ -194,6 +194,10 @@ window#waybar #workspaces-container:hover {
     color: @foreground;
 }
 
+#battery.critical:hover {
+    background: @orange-hover;
+}
+
 #tray {
     background: @background;
     color: @foreground;

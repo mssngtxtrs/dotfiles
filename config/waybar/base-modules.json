@@ -72,7 +72,6 @@
             "on-scroll-down": "shift_down"
         },
         "on-click": "swaync-client -t -sw",
-        "on-click-right": "/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=io.github.alainm23.planify io.github.alainm23.planify"
     },
 
     "cpu": {
@@ -94,7 +93,7 @@
         "critical-threshold": 95,
         "format": " {temperatureC}°C",
         "tooltip-format": "Температура: {temperatureC}°C",
-        "on-click": "GTK_THEME=Gruvbox-Teal-Dark-Medium missioncenter",
+        "on-click": "missioncenter",
         "interval": 5
     },
 
@@ -150,7 +149,7 @@
         "format-icons": [
             "󰤟", "󰤢", "󰤥", "󰤨"
         ],
-        "on-click": "nm-connection-editor",
+        "on-click": "$XDG_CONFIG_HOME/rofi/network-manager.sh",
         "on-click-right": "sh -c '[[ $(nmcli radio wifi) =~ \"enabled\" ]] && nmcli radio wifi off || nmcli radio wifi on'"
     },
 
@@ -184,7 +183,7 @@
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "on-click": "GTK_THEME=Gruvbox-Teal-Dark-Medium overskride",
+        "on-click": "$XDG_CONFIG_HOME/rofi/bluetooth.sh",
         "on-click-right": "sh -c '[[ $(bluetoothctl show 5C:C3:36:F6:DB:3B | grep \"PowerState\") =~ \"PowerState: on\" ]] && bluetoothctl power off || bluetoothctl power on'"
     }
 }
