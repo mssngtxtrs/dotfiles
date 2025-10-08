@@ -1,0 +1,20 @@
+{
+    "name": "workspaces-bar",
+    "position": "bottom",
+    "layer": "bottom",
+    "height": 0,
+    "margin": "-4px 0 -1px 0",
+
+    "modules-center" : [ "group/workspaces-container" ],
+
+    "include": [
+        "~/.config/waybar/base-modules.json"
+    ],
+
+    "group/workspaces-container": {
+	"orientation": "horizontal",
+	"modules": [
+	    "hyprland/workspaces"
+	]
+    }
+}

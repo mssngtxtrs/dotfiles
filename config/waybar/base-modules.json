@@ -9,11 +9,13 @@
 
     "hyprland/workspaces": {
 	"format": "{id} | {windows}",
+	"show-special": true,
 	"format-window-separator": " ",
 	"workspace-taskbar": {
 	    "enable": true,
 	    "format": "{icon}",
 	    "icon-size": 18
+	}
     },
 
     "hyprland/window": {
@@ -23,7 +25,7 @@
 	},
         "tooltip-format": "{title}\n{class}",
         "on-click": "pgrep -x rofi >/dev/null 2>&1 && killall rofi || rofi -show drun -config launcher.rasi",
-        "on-click-right": "pgrep -x rofi >/dev/null 2>&1 && killall rofi || rofi -modi drun,run,window,calc,filebrowser -show window -config search.rasi"
+        "on-click-right": "pgrep -x rofi >/dev/null 2>&1 && killall rofi || rofi -show window -config search.rasi"
     },
 
     "idle_inhibitor": {

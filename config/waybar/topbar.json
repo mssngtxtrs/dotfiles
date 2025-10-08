@@ -23,7 +23,6 @@
         "modules": [
             "group/stats",
             "custom/weather",
-            "hyprland/workspaces",
 	    "hyprland/window"
         ]
     },

@@ -53,6 +53,22 @@ window#waybar #right-elements {
     margin-left: 4px;
 }
 
+window#waybar #workspaces-container {
+    min-height: 28px;
+    margin-bottom: -26px;
+    margin-top: 2px;
+    border: 1px solid @foreground;
+    border-radius: 8px;
+    background: none;
+    color: @background;
+    transition: .1s ease-out;
+}
+
+window#waybar #workspaces-container:hover {
+    margin-bottom: 5px;
+    margin-top: 4px;
+}
+
 #clock,
 #cpu,
 #memory,
@@ -86,25 +102,37 @@ window#waybar #right-elements {
 #workspaces button {
     transition: .3s;
     border-radius: 0;
+    background: @foreground-hover;
+    color: @background;
+    opacity: 0.7;
 }
 
 #workspaces button:hover {
-    transition: .3s;
-    background: @background-hover;
-    border-radius: 0;
+    background: @foreground;
+}
+
+#workspaces button:first-child {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+#workspaces button:last-child {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+#workspaces button:hover {
+    background: @foreground;
 }
 
 #workspaces button.active {
-    transition: .3s;
     background: @foreground;
     color: @background;
-    border-radius: 0;
+    opacity: 1
 }
 
 #workspaces button.active:hover {
-    transition: .3s;
     background: @foreground-hover;
-    border-radius: 0;
 }
 
 #workspaces .taskbar-window {

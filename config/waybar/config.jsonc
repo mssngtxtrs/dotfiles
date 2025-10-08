@@ -1,7 +1,11 @@
 [
     {
         "include": [
-            "~/.config/waybar/topbar.json"
+            "$XDG_CONFIG_HOME/waybar/topbar.json"
         ]
+    },{
+	"include": [
+	    "$XDG_CONFIG_HOME/waybar/workspaces.json"
+	]
     }
 ]
