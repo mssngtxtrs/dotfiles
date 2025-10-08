@@ -18,6 +18,9 @@
 
     "hyprland/window": {
         "format": "{title}",
+	"rewrite": {
+	   "": "  <tt>LMB</tt> or <tt>Super</tt> to open App launcher, <tt>RMB</tt> or <tt>Super + Tab</tt> to open Window switcher  "
+	},
         "tooltip-format": "{title}\n{class}",
         "on-click": "pgrep -x rofi >/dev/null 2>&1 && killall rofi || rofi -show drun -config launcher.rasi",
         "on-click-right": "pgrep -x rofi >/dev/null 2>&1 && killall rofi || rofi -modi drun,run,window,calc,filebrowser -show window -config search.rasi"
