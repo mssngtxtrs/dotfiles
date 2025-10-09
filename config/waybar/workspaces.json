@@ -1,7 +1,8 @@
 {
     "name": "workspaces-bar",
     "position": "bottom",
-    "layer": "bottom",
+    "exclusive": false,
+    "layer": "top",
     "height": 0,
     "margin": "-4px 0 -1px 0",
 

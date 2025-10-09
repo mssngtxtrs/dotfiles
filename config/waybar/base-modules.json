@@ -8,14 +8,8 @@
     },
 
     "hyprland/workspaces": {
-	"format": "{windows}",
-	"show-special": true,
-	"format-window-separator": " ",
-	"workspace-taskbar": {
-	    "enable": true,
-	    "format": "{icon}",
-	    "icon-size": 32
-	}
+	"format": "{id}",
+	"show-special": true
     },
 
     "hyprland/window": {

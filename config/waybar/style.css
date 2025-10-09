@@ -55,9 +55,9 @@ window#waybar #right-elements {
 
 window#waybar #workspaces-container {
     min-height: 28px;
-    margin-bottom: -26px;
-    margin-top: 2px;
-    border: 1px solid @foreground;
+    margin-bottom: -24px;
+    margin-top: 4px;
+    border: none;
     border-radius: 8px;
     background: none;
     color: @background;
@@ -88,7 +88,7 @@ window#waybar #workspaces-container:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 10px;
 }
 
 #custom-tray-open {
@@ -133,10 +133,6 @@ window#waybar #workspaces-container:hover {
 
 #workspaces button.active:hover {
     background: @foreground-hover;
-}
-
-#workspaces .taskbar-window {
-    padding: 0 2px;
 }
 
 #cpu {
