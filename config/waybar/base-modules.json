@@ -8,7 +8,7 @@
     },
 
     "hyprland/workspaces": {
-	"format": "{id}",
+	"format": "{name}",
 	"show-special": true
     },
 
