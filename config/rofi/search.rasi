@@ -40,14 +40,14 @@ scrollbar {
 
 message {
     border: none;
-    padding:  4px;
+    padding: 0 8px 4px 8px;
     margin: 0;
     background-color: #ebdbb2;
     color: #282828;
 }
 
 inputbar {
-    padding: 8px 6px;
+    padding: 8px;
     border: none;
     background-color: #ebdbb2;
     text-color: #282828;

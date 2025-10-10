@@ -50,6 +50,7 @@ Hyprland
  - [Gruvbox Kitty theme](https://github.com/wdomitrz/kitty_gruvbox_theme) by wdomitrz
  - [Rofi Network Manager script](https://github.com/meowrch/rofi-network-manager) by meowrch
  - [Rofi Bluetooth scrpit](https://github.com/nickclyde/rofi-bluetooth) by nickclyde
+ - [Rofi Power Menu](https://github.com/jluttine/rofi-power-menu) by jluttine
  - Adwaita Mono, Adwaita Sans fonts
 
 It is also highly recommended to install Font Awesome 6 manually!
@@ -97,7 +98,7 @@ This sections contains info about used keybinds and gestures
 
 `Super + M` - Suspend
 
-`Control + Alt + Delete` - Exit session
+`Control + Alt + Delete` - Open power menu
 
 ##### Language
 

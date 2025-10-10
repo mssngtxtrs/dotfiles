@@ -34,7 +34,7 @@ scrollbar {
 }
 
 inputbar {
-    padding: 8px 6px;
+    padding: 8px;
     border: none;
     background-color: #ebdbb2;
     text-color: #282828;
