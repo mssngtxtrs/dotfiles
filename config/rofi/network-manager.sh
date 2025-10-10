@@ -10,6 +10,7 @@
 # Github: https://github.com/DIMFLIX-OFFICIAL
 
 
+THEME="-theme systems.rasi"
 SESSION_TYPE="$XDG_SESSION_TYPE"
 ENABLED_COLOR="#A3BE8C"
 DISABLED_COLOR="#D35F5E"
@@ -89,7 +90,7 @@ manage_wifi() {
 
     formatted_list=$(printf "%s" "$formatted_list")
 
-    local chosen_network=$(echo -e "$formatted_list" | rofi -dmenu -i -selected-row 1 -p "Wi-Fi SSID: ")
+    local chosen_network=$(echo -e "$formatted_list" | rofi -dmenu $THEME -i -selected-row 1 -p "Wi-Fi SSID")
     local ssid_index=-1
     for i in "${!formatted_ssids[@]}"; do
         if [[ "${formatted_ssids[$i]}" == "$chosen_network" ]]; then
@@ -115,7 +116,7 @@ manage_wifi() {
             action="󰸋  Connect"
         fi
 
-        action=$(echo -e "$action\n  Forget" | rofi -dmenu -p "Action: ")
+        action=$(echo -e "$action\n  Forget" | rofi -dmenu $THEME -p "Action")
         case $action in
             "󰸋  Connect")
                 local success_message="You are now connected to the Wi-Fi network \"$chosen_id\"."
@@ -123,7 +124,7 @@ manage_wifi() {
                 if [[ $(echo "$saved_connections" | grep -Fx "$chosen_id") ]]; then
                     nmcli connection up id "$chosen_id" | grep "successfully" && notify-send "Connection Established" "$success_message"
                 else
-                    local wifi_password=$(rofi -dmenu -p "Password: " -password)
+                    local wifi_password=$(rofi -dmenu $THEME -p "Password: " -password)
                     nmcli device wifi connect "$chosen_id" password "$wifi_password" | grep "successfully" && notify-send "Connection Established" "$success_message"
                 fi
                 ;;
@@ -156,7 +157,7 @@ manage_ethernet() {
         fi
     done
 
-    local chosen_device=$(echo -e "$eth_list" | rofi -dmenu -i -p "Select Ethernet device: ")
+    local chosen_device=$(echo -e "$eth_list" | rofi -dmenu $THEME -i -p "Select Ethernet device")
 
     if [ -z "$chosen_device" ]; then
         return
@@ -206,7 +207,7 @@ main_menu() {
     ##==> Если служба не запущена
     ###############################################
     if ! pgrep -x "NetworkManager" > /dev/null; then
-        echo -n "Root Password: "
+        echo -n "Root Password"
         read -s password
         echo "$password" | sudo -S systemctl start NetworkManager
     fi
@@ -216,7 +217,7 @@ main_menu() {
     local wifi_status=$(nmcli -fields WIFI g)
     local wifi_toggle
     if [[ "$wifi_status" =~ "enabled" ]]; then
-        wifi_toggle="󱛅  Disable Wi-Fi"
+        wifi_toggle="󱛅 Disable Wi-Fi"
         wifi_toggle_command="off"
         manage_wifi_btn="\n󱓥 Manage Wi-Fi"
     else
@@ -227,7 +228,7 @@ main_menu() {
 
     ##==> Выводим Rofi меню
     #######################################################
-    local chosen_option=$(echo -e "$wifi_toggle$manage_wifi_btn\n󱓥 Manage Ethernet" | rofi -dmenu -p " Network Management: ")
+    local chosen_option=$(echo -e "$wifi_toggle$manage_wifi_btn\n󱓥 Manage Ethernet" | rofi -dmenu $THEME -p " Network Management")
     case $chosen_option in
         "$wifi_toggle")
             nmcli radio wifi $wifi_toggle_command

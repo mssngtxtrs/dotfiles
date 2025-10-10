@@ -42,31 +42,42 @@ inputbar {
     children: [ prompt, textbox-prompt-colon, entry ];
 }
 
+textbox {
+    background-color: transparent;
+}
+
 prompt {
-    background: #ebdbb2;
+    background-color: transparent;
     color: #282828;
+    expand: false;
 }
 
 textbox-prompt-colon {
+    background-color: transparent;
     str: "|";
     margin: 0 4px;
+    expand: false;
 }
 
 entry {
     background-color: #ebdbb2;
     text-color: #282828;
-    placeholder: 'Поиск...';
+    placeholder: 'Type here...';
     font: 'Adwaita Mono 14';
 }
 
 element {
-    background: #282828;
+    background-color: #282828;
     color: #ebdbb2;
     orientation: horizontal;
     children: [ element-text  ];
     padding: 2px 4px;
     spacing: 5px;
     border-radius: 3px;
+}
+
+element-text {
+    background-color: transparent;
 }
 
 element normal.normal, element alternate.normal {

@@ -53,7 +53,7 @@ inputbar {
 entry {
     background-color: #ebdbb2;
     text-color: #282828;
-    placeholder: 'Поиск...';
+    placeholder: 'Search...';
     font: 'Adwaita Sans 14';
 }
 
