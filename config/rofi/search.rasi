@@ -2,22 +2,20 @@ configuration {
     modes: [ window, drun, run, calc, filebrowser ];
 }
 
-@theme 'gruvbox-dark'
-
 window {
     border-color: #ebdbb2;
     border: 1px solid;
+    border-radius: 8px;
     font: 'Adwaita Mono 14';
     margin: 0;
     padding: 0;
-    location: south west;
-    x-offset: 16px;
-    y-offset: -16px;
-    width: calc((100% - 8px - 4px) / 2 - 24px);
-    height: calc((100% - 8px - 4px) / 2 - 24px);
+    location: center;
+    width: 50%;
+    height: 50%;
 }
 
 mainbox {
+    background-color: #ebdbb2;
     children: [ inputbar, message, listview, mode-switcher ];
 }
 
@@ -25,15 +23,27 @@ listview {
     spacing: 4px;
     background-color: #282828;
     text-color: #ebdbb2;
-    padding: 2px 0 2px 4px;
+    padding: 4px;
     border: none;
+    border-radius: 7px;
     scrollbar-width: 8px;
+}
+
+scrollbar {
+    width: 12px;
+    handle-width: 6px;
+    handle-color: #ebdbb2;
+    handle-rounded-corners: true;
+    padding: 0;
+    spacing: 0;
 }
 
 message {
     border: none;
-    padding:  4px 4px 0 4px;
+    padding:  4px;
     margin: 0;
+    background-color: #ebdbb2;
+    color: #282828;
 }
 
 inputbar {
@@ -53,6 +63,8 @@ entry {
 }
 
 element {
+    padding: 2px 4px;
+    border-radius: 3px;
     background: #282828;
     color: #ebdbb2;
     orientation: horizontal;
@@ -60,7 +72,7 @@ element {
     spacing: 5px;
 }
 
-element alternate.normal {
+element normal.normal, element alternate.normal {
     background-color: #282828;
     text-color: #ebdbb2;
 }
@@ -81,15 +93,16 @@ element selected.active {
 }
 
 mode-switcher {
-    background-color: #282828;
-    color: #ebdbb2;
-    padding: 0;
+    padding: 2px 4px 4px 4px;
     margin: 0;
-    border: 1px 0 0 0 solid;
-    border-color: #ebdbb2;
+    spacing: 4px;
 }
 
-mode-switcher Button {
-    background-color: #ebdbb2;
+button {
+    border-radius: 3px;
+}
+
+button selected.normal {
+    background-color: #689d6a;
     color: #282828;
 }

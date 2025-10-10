@@ -1,25 +1,36 @@
-@theme 'gruvbox-dark'
-
 window {
     border-color: #ebdbb2;
     border: 1px solid;
+    border-radius: 8px;
     font: 'Adwaita Mono 14';
     margin: 0;
     padding: 0;
-    location: south west;
-    x-offset: 16px;
-    y-offset: -16px;
-    width: calc((100% - 8px - 4px) / 2 - 24px);
-    height: calc((100% - 8px - 4px) / 2 - 24px);
+    location: center;
+    width: 50%;
+    height: 50%;
+}
+
+mainbox {
+    background-color: #ebdbb2;
 }
 
 listview {
     spacing: 4px;
     background-color: #282828;
     text-color: #ebdbb2;
-    padding: 2px 0 2px 4px;
+    padding: 4px;
     border: none;
+    border-radius: 7px;
     scrollbar-width: 8px;
+}
+
+scrollbar {
+    width: 12px;
+    handle-width: 6px;
+    handle-color: #ebdbb2;
+    handle-rounded-corners: true;
+    padding: 0;
+    spacing: 0;
 }
 
 inputbar {
@@ -28,7 +39,17 @@ inputbar {
     background-color: #ebdbb2;
     text-color: #282828;
 
-    children: [ entry ];
+    children: [ prompt, textbox-prompt-colon, entry ];
+}
+
+prompt {
+    background: #ebdbb2;
+    color: #282828;
+}
+
+textbox-prompt-colon {
+    str: "|";
+    margin: 0 4px;
 }
 
 entry {
@@ -43,10 +64,12 @@ element {
     color: #ebdbb2;
     orientation: horizontal;
     children: [ element-text  ];
+    padding: 2px 4px;
     spacing: 5px;
+    border-radius: 3px;
 }
 
-element alternate.normal {
+element normal.normal, element alternate.normal {
     background-color: #282828;
     text-color: #ebdbb2;
 }

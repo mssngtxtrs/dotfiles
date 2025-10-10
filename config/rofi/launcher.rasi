@@ -3,29 +3,42 @@ configuration {
     icon-theme: 'Gruvbox-Plus-Dark';
 }
 
-@theme 'gruvbox-dark'
-
 window {
     border-color: #ebdbb2;
     border: 1px solid;
+    border-radius: 8px;
     font: 'Adwaita Sans 14';
     location: center;
     width: calc(80% - 8px - 24px);
-    height: calc(73.19% - 8px - 24px);
+    height: calc(80% - 8px - 24px);
     margin: 0;
     padding: 0;
+}
+
+mainbox {
+    background-color: #ebdbb2;
 }
 
 listview {
     columns: 6;
     fixed-columns: true;
     flow: horizontal;
-    spacing: 12px;
+    spacing: 4px;
     background-color: #282828;
     text-color: #ebdbb2;
-    padding: 10px 0 10px 12px;
+    padding: 4px;
     border: none;
+    border-radius: 7px;
     scrollbar-width: 8px;
+}
+
+scrollbar {
+    width: 12px;
+    handle-width: 6px;
+    handle-color: #ebdbb2;
+    handle-rounded-corners: true;
+    padding: 0;
+    spacing: 0;
 }
 
 inputbar {
@@ -50,9 +63,10 @@ element {
     orientation: vertical;
     children: [ element-icon, element-text  ];
     spacing: 5px;
+    border-radius: 3px;
 }
 
-element alternate.normal {
+element normal.normal, element alternate.normal {
     background-color: #282828;
     text-color: #ebdbb2;
 }
