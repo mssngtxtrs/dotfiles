@@ -31,6 +31,7 @@ Hyprland
  - Cliphist
  - SwayNC
  - SwayOSD
+ - KDE Connect
 
 ### Used apps
 
@@ -39,7 +40,6 @@ Hyprland
  - Nemo 
  - Kitty 
  - Mission Center
- - Visual Studio Code
  - Neovim 
  - GNOME Software
 
@@ -138,8 +138,6 @@ This sections contains info about used keybinds and gestures
 
 `Control + Shift + Escape` - Open task manager (missioncenter)
 
-`Super + I` - Open IDE (code)
-
 ### Gestures
 
 All gestures presented in this format: `fingers, gesture[, mod]`
@@ -179,7 +177,7 @@ This script will automatically install all required packages and copy configurat
 
 2. Install needed packages
 
-`sudo pacman -S hyprland hyprlock hypridle hyprshot rofi-calc swww rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim code mission-center gnome-software packagekit`
+`sudo pacman -S hyprpolkitagent xdg-desktop-portal-hyprland hyprpicker hyprland hyprlock hypridle hyprshot rofi-calc swww rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim kdeconnect mission-center gnome-software packagekit`
 
 3. Copy files from `config` folder to `~/.config`
 
