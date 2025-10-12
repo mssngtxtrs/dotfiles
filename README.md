@@ -211,8 +211,10 @@ These packages are additional, desktop will work correctly without them
 
 4. Allow script execution
 
-`chmod +x ~/.config/rofi/bluetooth.sh`
-`chmod +x ~/.config/rofi/network-manager.sh`
-`chmod +x ~/.config/rofi/power-menu.sh`
-`chmod +x ~/.config/hypr/wallpaper_changer.sh`
-`chmod +x ~/.config/hypr/xdg-desktop-portal-setup.sh`
+```sh
+chmod +x ~/.config/rofi/bluetooth.sh
+chmod +x ~/.config/rofi/network-manager.sh
+chmod +x ~/.config/rofi/power-menu.sh
+chmod +x ~/.config/hypr/wallpaper_changer.sh
+chmod +x ~/.config/hypr/xdg-desktop-portal-setup.sh
+```
