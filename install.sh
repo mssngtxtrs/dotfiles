@@ -62,12 +62,13 @@ if [ -f /etc/os-release ]; then
         sudo dnf copr enable alternateved/cliphist
         sudo dnf copr enable markupstart/SwayOSD 
         sudo dnf copr enable ackerman/mission-center
+        sudo dnf copr enable skoved/rofi-calc 
 
         echo "========================================="
         echo "=  Installing hyprland and programs...  ="
         echo "========================================="
         
-        sudo dnf install hyprpolkitagent xdg-desktop-portal-hyprland hyprland hyprpicker hyprlock hypridle hyprshot rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim kde-connect mission-center gnome-software -y
+        sudo dnf install hyprpolkitagent xdg-desktop-portal-hyprland hyprland hyprpicker hyprlock hypridle hyprshot rofi-wayland rofi-calc waybar cliphist swaync swayosd nemo kitty neovim kde-connect mission-center gnome-software -y
         
         echo "===================================="
         echo "=  Copying configuration files...  ="
