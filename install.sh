@@ -22,6 +22,23 @@ if [ -f /etc/os-release ]; then
         echo "===================================="
         
         cp -r ./config/* ~/.config/
+ 
+        echo "=================================="
+        echo "=  Allowing scrpit execution...  ="
+        echo "=================================="
+
+        chmod +x ~/.config/rofi/bluetooth.sh
+        chmod +x ~/.config/rofi/network-manager.sh
+        chmod +x ~/.config/rofi/power-menu.sh
+        chmod +x ~/.config/hypr/wallpaper_changer.sh
+        chmod +x ~/.config/hypr/xdg-desktop-portal-setup.sh
+        
+        echo ""
+        echo ""
+        echo "Dotfiles are installed!"
+        echo "Reboot is recommended"
+        echo ""
+        echo ""
         
         echo ""
         echo ""
@@ -57,6 +74,16 @@ if [ -f /etc/os-release ]; then
         echo "===================================="
         
         cp -r ./config/* ~/.config/
+
+        echo "=================================="
+        echo "=  Allowing scrpit execution...  ="
+        echo "=================================="
+
+        chmod +x ~/.config/rofi/bluetooth.sh
+        chmod +x ~/.config/rofi/network-manager.sh
+        chmod +x ~/.config/rofi/power-menu.sh
+        chmod +x ~/.config/hypr/wallpaper_changer.sh
+        chmod +x ~/.config/hypr/xdg-desktop-portal-setup.sh
         
         echo ""
         echo ""
