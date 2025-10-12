@@ -29,7 +29,7 @@ if [ -f /etc/os-release ]; then
         echo "Reboot is recommended"
         echo ""
         echo ""
-    else if [[ $OS = "fedora" ]]; then
+    elif [[ $OS = "fedora" ]]; then
         echo "============================"
         echo "=  Updating the system...  ="
         echo "============================"
