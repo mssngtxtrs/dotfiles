@@ -11,7 +11,9 @@ Heavily inspired by gruvbox theme by morhetz.
 
 ### Used distro
 
-Arch linux
+Arch linux / Cachy OS (recommended)
+
+Fedora Workstation
 
 ### Used WM
 
@@ -27,6 +29,7 @@ Hyprland
  - Hyprland XDG Desktop Portal
  - swww
  - Rofi
+ - Rofi Calc
  - Waybar
  - Cliphist
  - SwayNC
@@ -161,24 +164,55 @@ All gestures presented in this format: `fingers, gesture[, mod]`
 ## Installation
 <a name="installation"></a>
 
-### Arch linux
-
-#### Install with script
+### Install with script
 
 `$ chmod +x install.sh && install.sh`
 
+This option works only with Arch Linux and Fedora Workstation 42!
+
 This script will automatically install all required packages and copy configuration files
 
-#### Manual install
+### Manual install
 
 1. Update the system
 
-`sudo pacman -Syu`
+2. Ensure needed packages are installed
 
-2. Install needed packages
+Required package list:
+ - `hyprland`
+ - `hyprpolkitagent`
+ - `xdg-desktop-portal-hyprland`
+ - `hyprlock`
+ - `hypridle`
+ - `rofi-wayland`
+ - `rofi-calc`
+ - `swww`
+ - `waybar`
+ - `cliphist`
+ - `swaync`
+ - `swayosd`
+ - `kitty`
 
-`sudo pacman -S hyprpolkitagent xdg-desktop-portal-hyprland hyprpicker hyprland hyprlock hypridle hyprshot rofi-calc swww rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim kdeconnect mission-center gnome-software packagekit`
+These packages are required for proper desktop work
+
+Additional package list:
+ - `hyprpicker`
+ - `hyprshot`
+ - `nemo`
+ - `kitty`
+ - `neovim`
+ - `kdeconnect`
+ - `mission-center` (native version)
+ - `gnome-software`
+
+These packages are additional, desktop will work correctly without them
 
 3. Copy files from `config` folder to `~/.config`
 
-`cp -r ./config/* ~/.config/`
+4. Allow script execution
+
+`chmod +x ~/.config/rofi/bluetooth.sh`
+`chmod +x ~/.config/rofi/network-manager.sh`
+`chmod +x ~/.config/rofi/power-menu.sh`
+`chmod +x ~/.config/hypr/wallpaper_changer.sh`
+`chmod +x ~/.config/hypr/xdg-desktop-portal-setup.sh`
