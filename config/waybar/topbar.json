@@ -23,7 +23,7 @@
         "modules": [
             "group/stats",
             "custom/weather",
-	    "hyprland/window"
+    	    "hyprland/window"
         ]
     },
 
@@ -66,7 +66,6 @@
         "orientation": "horizontal",
         "modules": [
             "battery",
-            "gamemode",
             "power-profiles-daemon",
             "idle_inhibitor"
         ],

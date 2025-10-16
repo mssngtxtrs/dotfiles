@@ -65,7 +65,7 @@
             "on-scroll-up": "shift_up",
             "on-scroll-down": "shift_down"
         },
-        "on-click": "swaync-client -t -sw",
+        "on-click": "swaync-client -t -sw"
     },
 
     "cpu": {
@@ -117,17 +117,6 @@
         "balanced": "",
         "power-saver": ""
       }
-    },
-
-    "gamemode": {
-        "format": " {count}",
-        "glyph": "",
-        "hide-not-running": true,
-        "use-icon": false,
-        "icon-spacing": 0,
-        "icon-size": 0,
-        "tooltip": true,
-        "tooltip-format": "{count} игр запущено"
     },
 
     "network": {
