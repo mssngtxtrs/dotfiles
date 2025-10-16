@@ -9,3 +9,6 @@ window {
     height: 400px;
 }
 
+listview {
+    scrollbar: false;
+}
