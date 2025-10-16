@@ -1,4 +1,4 @@
-# Dotfiles
+# Gruvbox PK
 
 [About](#about) | [Manual](#manual) | [Installation](#installation)
 
