@@ -9,8 +9,8 @@ window {
     border-radius: 8px;
     font: 'Adwaita Sans 14';
     location: center;
-    width: calc(80% - 8px - 24px);
-    height: calc(80% - 8px - 24px);
+    width: 1200px;
+    height: 960px;
     margin: 0;
     padding: 0;
 }

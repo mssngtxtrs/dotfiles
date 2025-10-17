@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PATH_TO_WALLPAPER=~/Изображения/хуйня/фон
+PATH_TO_WALLPAPER=~/Pictures
 WALLPAPER=$(ls $PATH_TO_WALLPAPER | rofi -dmenu)
 
 if [[ $WALLPAPER ]]; then 
