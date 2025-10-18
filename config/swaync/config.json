@@ -29,7 +29,7 @@
   "transition-time": 200,
   "hide-on-clear": false,
   "hide-on-action": true,
-  "text-empty": " Уведомлений нет",
+  "text-empty": "No notifications",
   "script-fail-notify": true,
   "widgets": [
     "mpris",
@@ -43,12 +43,12 @@
   ],
   "widget-config": {
     "title": {
-      "text": "Уведомления",
+      "text": "Notifications",
       "clear-all-button": true,
-      "button-text": "Очистить"
+      "button-text": "Clear"
     },
     "dnd": {
-      "text": "Не беспокоить"
+      "text": "Do not disturb"
     },
     "label": {
       "max-lines": 5,
@@ -106,7 +106,7 @@
     "volume": {
 	"label": "󰕾",
         "show-per-app": false,
-	"empty-list-label": "Нет активных устройств"
+	"empty-list-label": "No devices available"
     },
     "backlight": {
 	"label": "󰃟",
