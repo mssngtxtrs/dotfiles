@@ -228,7 +228,7 @@ main_menu() {
 
     ##==> Выводим Rofi меню
     #######################################################
-    local chosen_option=$(echo -e "$wifi_toggle$manage_wifi_btn\n󱓥 Manage Ethernet" | rofi -dmenu $THEME -p " Network Management")
+    local chosen_option=$(echo -e "$wifi_toggle$manage_wifi_btn\n󱓥 Manage Ethernet" | rofi -dmenu $THEME -p " Network")
     case $chosen_option in
         "$wifi_toggle")
             nmcli radio wifi $wifi_toggle_command
