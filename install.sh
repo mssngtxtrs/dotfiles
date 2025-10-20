@@ -15,7 +15,7 @@ if [ -f /etc/os-release ]; then
         echo "=  Installing hyprland and programs...  ="
         echo "========================================="
         
-        sudo pacman -S hyprpolkitagent xdg-desktop-portal-hyprland hyprpicker hyprland hyprlock hypridle hyprshot rofi-calc swww rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim kdeconnect mission-center gnome-software packagekit --noconfirm
+        sudo pacman -S hyprpolkitagent xdg-desktop-portal-hyprland hyprpicker hyprland hyprlock hypridle hyprshot rofi-calc swww rofi-wayland waybar cliphist swaync swayosd nemo kitty neovim kdeconnect mission-center --noconfirm
         
         echo "===================================="
         echo "=  Copying configuration files...  ="
@@ -32,14 +32,7 @@ if [ -f /etc/os-release ]; then
         chmod +x ~/.config/rofi/power-menu.sh
         chmod +x ~/.config/hypr/wallpaper_changer.sh
         chmod +x ~/.config/hypr/xdg-desktop-portal-setup.sh
-        
-        echo ""
-        echo ""
-        echo "Dotfiles are installed!"
-        echo "Reboot is recommended"
-        echo ""
-        echo ""
-        
+
         echo ""
         echo ""
         echo "Dotfiles are installed!"
@@ -68,7 +61,7 @@ if [ -f /etc/os-release ]; then
         echo "=  Installing hyprland and programs...  ="
         echo "========================================="
         
-        sudo dnf install hyprpolkitagent xdg-desktop-portal-hyprland hyprland hyprpicker hyprlock hypridle hyprshot rofi-wayland rofi-calc waybar cliphist swaync swayosd nemo kitty neovim kde-connect mission-center gnome-software -y
+        sudo dnf install hyprpolkitagent xdg-desktop-portal-hyprland hyprland hyprpicker hyprlock hypridle hyprshot rofi-wayland rofi-calc waybar cliphist swaync swayosd nemo kitty neovim kde-connect mission-center -y
         
         echo "===================================="
         echo "=  Copying configuration files...  ="

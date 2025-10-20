@@ -1,13 +1,14 @@
 # Gruvbox PK
 
-[About](#about) | [Manual](#manual) | [Installation](#installation)
+<center>Dotfiles for Arch/Fedora + Hyprland desktop
 
-## About
-<a name="about"></a>
+Heavily inspired by [gruvbox theme](https://github.com/morhetz/gruvbox)</center>
 
-My dotfiles that I use on my Arch Linux desktop with installation instruction.
+---
 
-Heavily inspired by gruvbox theme by morhetz.
+[Manual](#manual) | [Installation](#installation)
+
+---
 
 ### Used distro
 
@@ -44,7 +45,6 @@ Hyprland
  - Kitty 
  - Mission Center
  - Neovim 
- - GNOME Software
 
 ### Other used resources
 
@@ -203,7 +203,6 @@ Additional package list:
  - `neovim`
  - `kdeconnect`
  - `mission-center` (native version)
- - `gnome-software`
 
 These packages are additional, desktop will work correctly without them
 
