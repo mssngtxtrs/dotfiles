@@ -1,12 +1,12 @@
 # Gruvbox PK
 
-<p style="text-align: center;">Dotfiles for Arch/Fedora + Hyprland desktop</p>
+Dotfiles for Arch/Fedora + Hyprland desktop
 
-<p style="text-align: center;">Heavily inspired by [gruvbox theme](https://github.com/morhetz/gruvbox)</p>
+Heavily inspired by [gruvbox theme](https://github.com/morhetz/gruvbox)
 
 ---
 
-<p style="text-align: center;">[Manual](#manual) | [Installation](#installation)</p>
+[Manual](#manual) | [Installation](#installation)
 
 ---
 
