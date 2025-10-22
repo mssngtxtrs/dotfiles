@@ -99,7 +99,7 @@ This sections contains info about used keybinds and gestures
 
 `Control + Alt + Home` - Reboot
 
-`Super + M` - Suspend
+`Super + N` - Suspend
 
 `Control + Alt + Delete` - Open power menu
 
@@ -132,6 +132,8 @@ This sections contains info about used keybinds and gestures
 `Super + Shift + C` - Color picker
 
 `Super + W` - Open SwayNC
+
+`Super + M` - XKill-like window close (close window by clicking on it)
 
 #### Other apps
 
