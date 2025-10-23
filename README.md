@@ -95,11 +95,7 @@ This sections contains info about used keybinds and gestures
 
 ##### Power and session management
 
-`Control + Alt + End` - Shutdown
-
-`Control + Alt + Home` - Reboot
-
-`Super + N` - Suspend
+`Super + End` - Suspend
 
 `Control + Alt + Delete` - Open power menu
 
