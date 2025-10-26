@@ -54,6 +54,7 @@ Hyprland
  - [Rofi Network Manager script](https://github.com/meowrch/rofi-network-manager) by meowrch
  - [Rofi Bluetooth scrpit](https://github.com/nickclyde/rofi-bluetooth) by nickclyde
  - [Rofi Power Menu](https://github.com/jluttine/rofi-power-menu) by jluttine
+ - [Rofi Wallpaper Changer script](https://github.com/develcooking/hyprland-dotfiles) by develcooking
  - Adwaita Mono, Adwaita Sans fonts
 
 It is also highly recommended to install Font Awesome 6 manually!
