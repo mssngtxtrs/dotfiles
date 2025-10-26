@@ -1,5 +1,7 @@
 # Gruvbox PK
 
+<img width="1920" height="1080" alt="2025-10-26-233337_hyprshot" src="https://github.com/user-attachments/assets/24e0cb0b-3288-4188-b21d-cc0817c88f8f" />
+
 Dotfiles for Arch/Fedora + Hyprland desktop
 
 Heavily inspired by [gruvbox theme](https://github.com/morhetz/gruvbox)
