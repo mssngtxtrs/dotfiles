@@ -1,7 +1,42 @@
+:root {
+	--window-bg-color: #282828bf;
+	--view-bg-color: #1d2021bf;
+	--headerbar-bg-color: #282828;
+	--sidebar-bg-color: #282828;
+	--secondary-sidebar-bg-color: #282828;
+	--card-bg-color: #282828;
+	--overview-bg-color: #282828;
+	--thumbnail-bg-color: #282828;
+	--dialog-bg-color: #282828;
+	--popover-bg-color: #282828;
+
+	--window-fg-color: #ebdbb2;
+	--view-fg-color: #ebdbb2;
+	--headerbar-fg-color: #ebdbb2;
+	--sidebar-fg-color: #ebdbb2;
+	--secondary-sidebar-fg-color: #ebdbb2;
+	--card-fg-color: #ebdbb2;
+	--overview-fg-color: #ebdbb2;
+	--thumbnail-fg-color: #ebdbb2;
+	--dialog-fg-color: #ebdbb2;
+	--popover-fg-color: #ebdbb2;
+
+	--headerbar-backdrop-color: #1d2021;
+	--sidebar-backdrop-color: #1d2021;
+	--secondary-sidebar-backdrop-color: #1d2021;
+
+	--headerbar-border-color: transparent;
+	--sidebar-border-color: transparent;
+	--secondary-sidebar-border-color: transparent;
+}
+
+/* GTK NAMED COLORS
+   ----------------
+   use responsibly! */
 /* widget text/foreground color */
-@define-color theme_fg_color #fbf1c7;
+@define-color theme_fg_color #ebdbb2;
 /* text color for entries, views and content in general */
-@define-color theme_text_color #fbf1c7;
+@define-color theme_text_color #ebdbb2;
 /* widget base background color */
 @define-color theme_bg_color #282828;
 /* text widgets and the like base background color */
@@ -17,9 +52,9 @@
 /* insensitive text widgets and the like base background color */
 @define-color insensitive_base_color #282524;
 /* widget text/foreground color on backdrop windows */
-@define-color theme_unfocused_fg_color #fbf1c7;
+@define-color theme_unfocused_fg_color #ebdbb2;
 /* text color for entries, views and content in general on backdrop windows */
-@define-color theme_unfocused_text_color #fbf1c7;
+@define-color theme_unfocused_text_color #ebdbb2;
 /* widget base background color on backdrop windows */
 @define-color theme_unfocused_bg_color #282828;
 /* text widgets and the like base background color on backdrop windows */
@@ -40,20 +75,20 @@
 @define-color success_color #6c782e;
 /* these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
-@define-color wm_focused_title #fbf1c7;
+@define-color wm_focused_title #ebdbb2;
 @define-color wm_unfocused_title rgba(251, 241, 199, 0.7);
 @define-color wm_highlight rgba(251, 241, 199, 0.1);
 @define-color wm_border #080707;
 @define-color wm_focused_bg #282828;
 @define-color wm_unfocused_bg #282828;
-@define-color wm_button_icon #fbf1c7;
+@define-color wm_button_icon #ebdbb2;
 @define-color wm_button_icon alpha(black, 0.5);
 @define-color wm_button_focused_bg #353432;
 @define-color wm_button_unfocused_bg #353432;
 @define-color wm_button_hover_fg rgba(40, 40, 40, 0.87);
 @define-color wm_button_active_fg rgba(40, 40, 40, 0.87);
-@define-color wm_button_hover_bg #fbf1c7;
-@define-color wm_button_active_bg #fbf1c7;
+@define-color wm_button_hover_bg #ebdbb2;
+@define-color wm_button_active_bg #ebdbb2;
 /* FIXME this is really an API */
 @define-color content_view_bg #282524;
 @define-color placeholder_text_color #bcb496;
@@ -165,36 +200,32 @@ read if you used those and something break with a version upgrade you're on your
 @define-color accent_fg_color rgba(40, 40, 40, 0.87);
 @define-color accent_color #89b482;
 @define-color destructive_bg_color #c14a4a;
-@define-color destructive_fg_color #fbf1c7;
+@define-color destructive_fg_color #ebdbb2;
 @define-color destructive_color #c14a4a;
 @define-color success_bg_color #6c782e;
-@define-color success_fg_color #fbf1c7;
+@define-color success_fg_color #ebdbb2;
 @define-color success_color #6c782e;
 @define-color warning_bg_color #b47109;
-@define-color warning_fg_color #fbf1c7;
+@define-color warning_fg_color #ebdbb2;
 @define-color warning_color #b47109;
 @define-color error_bg_color #c14a4a;
-@define-color error_fg_color #fbf1c7;
+@define-color error_fg_color #ebdbb2;
 @define-color error_color #c14a4a;
 @define-color window_bg_color #282828;
-@define-color sidebar_bg_color @view_bg_color;
-@define-color secondary_sidebar_bg_color @view_bg_color;
-@define-color window_fg_color #fbf1c7;
-@define-color sidebar_fg_color @view_fg_color;
-@define-color secondary_sidebar_fg_color @view_fg_color;
+@define-color window_fg_color #ebdbb2;
 @define-color view_bg_color #282524;
-@define-color view_fg_color #fbf1c7;
+@define-color view_fg_color #ebdbb2;
 @define-color headerbar_bg_color #282828;
-@define-color headerbar_fg_color #fbf1c7;
+@define-color headerbar_fg_color #ebdbb2;
 @define-color headerbar_border_color rgba(251, 241, 199, 0.12);
 @define-color headerbar_backdrop_color #282828;
 @define-color headerbar_shade_color rgba(251, 241, 199, 0.12);
 @define-color card_bg_color #282524;
-@define-color card_fg_color #fbf1c7;
+@define-color card_fg_color #ebdbb2;
 @define-color card_shade_color rgba(251, 241, 199, 0.12);
 @define-color dialog_bg_color #282524;
-@define-color dialog_fg_color #fbf1c7;
+@define-color dialog_fg_color #ebdbb2;
 @define-color popover_bg_color #242220;
-@define-color popover_fg_color #fbf1c7;
+@define-color popover_fg_color #ebdbb2;
 @define-color shade_color rgba(251, 241, 199, 0.12);
 @define-color scrollbar_outline_color rgba(251, 241, 199, 0.12);
